@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+:root {
+  --clear-btn: rgb(255, 171, 171);
+  --operator-btn: #d7d7d7;
+  --number-btns: rgb(245, 193, 255);
+  --equal-btn: rgb(181, 254, 181);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#js-calculator {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1em;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.operators {
+  background-color: var(--operator-btn);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.num-dec-btns {
+  background-color: var(--number-btns)
+}
+
+#js-calculator button {
+  min-width: 4em;
+  min-height: 4em;
+  border: none;
+}
+
+#display {
+  text-align: right;
+  height: 2em;
+  padding: 0.25em;
+}
+
+#button-container {
+  display: grid;
+  grid-template-areas: 
+  "clear clear divide multiply"
+  "seven eight nine subtract"
+  "four five six add"
+  "one two three equals"
+  "zero zero decimal equals";
+}
+
+#clear {
+  grid-area: clear;
+  background-color: var(--clear-btn);
+  border-top-left-radius: 0.25em;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#multiply {
+  grid-area: multiply;
+  border-top-right-radius: 0.25em;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#add {
+  grid-area: add;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#equals {
+  background-color: var(--equal-btn);
+  grid-area: equals;
+  border-bottom-right-radius: 0.25em;
+}
+
+#zero {
+  grid-area: zero;
+  border-bottom-left-radius: 0.25em;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
 }
